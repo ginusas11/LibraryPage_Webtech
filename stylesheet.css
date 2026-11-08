@@ -1,0 +1,158 @@
+:root {
+    --bg-color: #854a3c;
+    --text-color: #ffcec3;
+    --btn-color-1: #af4e1b;
+    --btn-color-2: #FCC7BB;
+    --dark-brown: #701905;
+    --light-bg: #FEEBE7;
+    --book-pattern: url(book-svgrepo-com.svg);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.bg-pattern {
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background-image: url("book-svgrepo-com.svg");
+    background-repeat: repeat;
+    background-size: 80px 80px;
+    transform: rotate(35deg); 
+    z-index: -1;
+    pointer-events: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    border: 5px solid var(--text-color);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    background-color: rgba(112, 25, 5, 0.9);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--btn-color-2);
+}
+
+.btn-group {
+    display: flex; 
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    background-color: var(--btn-color-1);
+    color: var(--light-bg);
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+    background-color: #d24f2e;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--btn-color-2);
+    color: var(--dark-brown);
+}
+
+.btn-secondary:hover {
+    background-color: #fff;
+}
+
+.form-container {
+    text-align: left;
+}
+
+.form-container label {
+    display: block;
+    margin-top: 10px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    background-color: var(--light-bg);
+    color: var(--dark-brown);
+    box-sizing: border-box;
+}
+
+.full-width {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--btn-color-2);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Teszt sáv és teszt gombok */
+.test-bar {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(250, 163, 143, 0.4);
+    text-align: center;
+}
+
+.test-bar p {
+    margin: 0 0 8px 0;
+    font-size: 0.8rem;
+    color: rgba(250, 163, 143, 0.7);
+}
+
+.btn-test {
+    background-color: transparent;
+    color: var(--btn-color-2);
+    border: 1px dashed var(--btn-color-2);
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-test:hover {
+    background-color: var(--btn-color-2);
+    color: var(--dark-brown);
+}

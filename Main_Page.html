@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webtech I - Könyvtár Alkalmazás</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+    <!-- A forgatott háttér minta -->
+    <div class="bg-pattern"></div>
+
+    <div class="container">
+        
+        <!-- WELCOME NÉZET -->
+        <div id="welcome-view" class="view">
+            <h1>WELCOME</h1>
+            <p class="subtitle">Store your books in a fashionable way</p>
+            
+            <div class="btn-group">
+                <button class="btn" onclick="showView('register-view')">&gt;&gt; REGISTER &lt;&lt;</button>
+                <button class="btn btn-secondary" onclick="showView('login-view')">&gt;&gt; LOGIN &lt;&lt;</button>
+            </div>
+
+            <!-- Teszt sáv -->
+            <div class="test-bar">
+                <p>Gyors teszt / Ugrás:</p>
+                <button class="btn-test" onclick="showView('library-view')">My Library</button>
+            </div>
+        </div>
+
+        <!-- REGISTER NÉZET -->
+        <div id="register-view" class="view form-container" style="display: none;">
+            <h1>REGISTER</h1>
+            <label>Felhasználónév:</label>
+            <input type="text" placeholder="Add meg a neved...">
+            
+            <label>Email cím:</label>
+            <input type="email" placeholder="pelda@email.com">
+
+            <label>Jelszó:</label>
+            <input type="password" placeholder="********">
+
+            <button class="btn full-width" onclick="showView('library-view')">Regisztráció</button>
+            <span class="back-link" onclick="showView('welcome-view')">&larr; Vissza a főoldalra</span>
+
+            <div class="test-bar">
+                <button class="btn-test" onclick="showView('library-view')">&#9881; Ugrás Library-re</button>
+            </div>
+        </div>
+
+        <!-- LOGIN NÉZET -->
+        <div id="login-view" class="view form-container" style="display: none;">
+            <h1>LOGIN</h1>
+            <label>Felhasználónév / Email:</label>
+            <input type="text" placeholder="Add meg az azonosítót...">
+
+            <label>Jelszó:</label>
+            <input type="password" placeholder="********">
+
+            <button class="btn full-width" onclick="showView('library-view')">Bejelentkezés</button>
+            <span class="back-link" onclick="showView('welcome-view')">&larr; Vissza a főoldalra</span>
+
+            <div class="test-bar">
+                <button class="btn-test" onclick="showView('library-view')">&#9881; Ugrás Library-re</button>
+            </div>
+        </div>
+
+        <!-- MY LIBRARY NÉZET -->
+        <div id="library-view" class="view" style="display: none;">
+            <h1>MY LIBRARY</h1>
+            
+            <div class="menu-list">
+                <div class="menu-item" onclick="alert('Itt jön majd az Add Book űrlap!')">ADD BOOK ⊕</div>
+                <div class="menu-item">MY BOOKS 📖</div>
+                <div class="menu-item">WISHLIST ★</div>
+            </div>
+
+            <!-- Polc vizualizáció -->
+            <div class="bookshelf-preview">
+                <p style="margin: 0 0 10px 0; font-size: 0.9rem; color: var(--btn-color-2);">Bookshelf:</p>
+                <div class="shelf">
+                    <div class="book-spine" style="width: 25px;" title="Példa könyv (250 oldal)"></div>
+                    <div class="book-spine" style="width: 45px;" title="Vastagabb könyv (450 oldal)"></div>
+                    <div class="book-spine" style="width: 15px;" title="Vékony könyv (120 oldal)"></div>
+                </div>
+            </div>
+
+            <button class="btn btn-secondary full-width" style="margin-top: 20px;" onclick="showView('welcome-view')">Kijelentkezés</button>
+
+            <div class="test-bar">
+                <button class="btn-test" onclick="showView('welcome-view')">&#9881; Vissza Welcome-ra</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
